@@ -6,7 +6,8 @@
   "scripts": {
     "test": "sh single.sh",
     "single": "sh single.sh",
-    "parallel": "sh parallel.sh"
+    "parallel": "sh parallel.sh",
+    "lt": "testcafe 'lambdatest:iPhone 13@15.0:ios' test.js"
   },
   "repository": {
     "type": "git",
