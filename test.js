@@ -208,7 +208,7 @@ test('Open Internet Heroku APP Check boxes 2nd time', async t => {
 
 
     global.globalJsonObject.executionTime = seconds;
-    global.globalJsonObject.buildName = 'Testcafe_Sample_build';
+    global.globalJsonObject.buildName = 'Testcafe_Sample_build_US_Jenkins';
     console.log(global.globalJsonObject);
 
     (async () => {
