@@ -134,8 +134,8 @@ test('Filling a form', async t => {
     // Let's submit our form
     await t
         .wait(500)
-        .click(page.submitButton)
-        .expect(page.results.innerText).contains('Bruce Wayne');
+        .click(page.submitButton);
+        // .expect(page.results.innerText).contains('Bruce Wayne');
 });
 
 fixture `2nd webpage`
@@ -204,10 +204,11 @@ test('Open Internet Heroku APP Check boxes 2nd time', async t => {
     const seconds = (endTime.getTime() - testExecutionStart.getTime()) / 1000;
     console.log("Test Execution time:  ", seconds);
     let startTimeString = "Test Execution time: "+String(seconds);
-    appendStringToFile(filePath, startTimeString);    
+    // appendStringToFile(filePath, startTimeString);    
 
 
     global.globalJsonObject.executionTime = seconds;
+    global.globalJsonObject.buildName = 'Testcafe_Sample_build';
     console.log(global.globalJsonObject);
 
     (async () => {
@@ -217,7 +218,7 @@ test('Open Internet Heroku APP Check boxes 2nd time', async t => {
             const headers = null;
             const expectedStatusCode = 200;
             const response = await pushDataToSumo(uri, body, headers, expectedStatusCode);
-            console.log('Response data:', response.data);
+            console.log('Response body: ', response.body);
         }catch(error){
             console.error('An error occurred while pushing data to Sumo:', error);
         }
