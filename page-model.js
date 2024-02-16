@@ -32,5 +32,13 @@ export default class Page {
 
         this.interfaceSelect       = Selector('#preferred-interface');
         this.interfaceSelectOption = this.interfaceSelect.find('option');
+
+        this.userNameInputHA       = Selector('[id=username]');
+        this.passInputHA           = Selector('[id=password]');
+        this.loginButtonHA         = Selector('[type=submit]');
+        this.loginSuccessHeaderHA  = Selector('#flash');
+
+        this.checkbox1HA           = Selector('#checkboxes>input:nth-of-type(1)');
+        this.checkbox2HA           = Selector('#checkboxes>input:nth-of-type(2)');
     }
 }

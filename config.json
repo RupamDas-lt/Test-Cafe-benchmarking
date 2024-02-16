@@ -4,5 +4,17 @@
         "network": true,
         "visual": true,
         "resolution": "1024x768"
+    },
+
+    "Chrome@121.0:Windows 10": {
+        "build": "TestCafe Demo",
+        "network": true,
+        "visual": true,
+        "resolution": "1024x768",
+        "tunnel": false
+    },
+
+    "iPhone 13@15.0:ios": {
+        "build": "TestCafe Demo"
     }
 }
